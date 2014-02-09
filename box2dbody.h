@@ -105,6 +105,8 @@ public:
     qreal gravityScale() const;
     void setGravityScale(qreal _gravityScale);
 
+    Q_SCRIPTABLE void setLinearVelocity(qreal vx, qreal vy);
+
     QQmlListProperty<Box2DFixture> fixtures();
 
     void initialize(b2World *world);

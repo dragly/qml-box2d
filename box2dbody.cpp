@@ -255,6 +255,11 @@ void Box2DBody::setGravityScale(qreal _gravityScale)
     }
 }
 
+void Box2DBody::setLinearVelocity(qreal vx, qreal vy)
+{
+    setLinearVelocity(QPointF(vx, vy));
+}
+
 QQmlListProperty<Box2DFixture> Box2DBody::fixtures()
 {
     return QQmlListProperty<Box2DFixture>(this, 0,
